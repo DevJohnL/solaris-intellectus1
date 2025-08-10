@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solaris Intelectus - Calculadora Híbrida</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Solaris Intelectus</h1>
+            <p>Sua calculadora inteligente para sistemas fotovoltaicos híbridos.</p>
+        </header>
+
+        <form id="dimensioning-form">
+            <h2>1. Dados Gerais do Projeto</h2>
+            <div class="form-group">
+                <label for="regiao">Sua Cidade/Região (para cálculo de irradiação solar):</label>
+                <input type="text" id="regiao" name="regiao" value="Fortaleza, Ceará" required>
+            </div>
+            <div class="form-group">
+                <label for="dias_autonomia">Dias de autonomia desejados (sem sol):</label>
+                <input type="number" id="dias_autonomia" name="dias_autonomia" value="1" min="1" required>
+            </div>
+
+            <h2>2. Equipamentos a Serem Alimentados</h2>
+            <div id="equipment-list">
+                </div>
+            <button type="button" id="add-equipment-btn">+ Adicionar Equipamento</button>
+            
+            <hr>
+
+            <button type="submit" class="submit-btn">Calcular Dimensionamento</button>
+        </form>
+
+        <section id="results-section" class="hidden">
+            <h2>Resultados do Dimensionamento</h2>
+            <div id="intellectus-analysis">
+                </div>
+            <div id="main-results">
+                </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
