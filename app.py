@@ -5,7 +5,7 @@ import io
 import math # <-- ADICIONADO: Importa a biblioteca de matemática
 
 # --- Inicialização do Servidor Flask ---
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static', template_folder='templates')  
 CORS(app) 
 
 # --- BANCO DE DADOS (embutido no código) ---
